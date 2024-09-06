@@ -1,0 +1,15 @@
+const uzbekistan_regions = [
+  "Toshkent shahri",
+  "Andijon viloyati",
+  "Buxoro viloyati",
+  "Farg'ona viloyati",
+  "Jizzax viloyati",
+  "Xorazm viloyati",
+  "Namangan viloyati",
+  "Navoiy viloyati",
+  "Samarqand viloyati",
+  "Sirdaryo viloyati",
+  "Surxondaryo viloyati",
+  "Toshkent viloyati",
+  "Qoraqalpog'iston respublikasi",
+];
