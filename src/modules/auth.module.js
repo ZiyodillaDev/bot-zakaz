@@ -11,7 +11,7 @@ const regionStep = router.route("region");
 const imageStep = router.route("image");
 const lastStep = router.route("last");
 nameStep.on("message", async (ctx) => {
-  ctx.session.name = ctx.message.text;
+  ctx.session.name = ctx.message.text || ctx.message?.contact?.phone_number;
   loginPhoneService(ctx);
 });
 

@@ -1,4 +1,4 @@
-const { InlineKeyboard } = require("grammy");
+const { Keyboard, InlineKeyboard } = require("grammy");
 
 const startService = async (ctx) => {
   await ctx.reply(
@@ -6,12 +6,13 @@ const startService = async (ctx) => {
       ctx.from.first_name
     } ${
       ctx.from.last_name || ""
-    }</a>. Zakaz berish uchun malumotlaringizni qoldiring! \n\nRo'yxatdan o'tishni boshlash uchun iltimos ismingizni kiriting.</b>`,
+    }</a>. Zakaz berish uchun malumotlaringizni qoldiring! \n\nRo'yxatdan o'tishni boshlash uchun iltimos raqamingizni kiriting.</b>`,
     {
       parse_mode: "HTML",
-      reply_markup: {
-        remove_keyboard: true,
-      },
+      reply_markup: new Keyboard()
+        .row()
+        .requestContact("Telefon raqam")
+        .resized(),
     }
   );
 

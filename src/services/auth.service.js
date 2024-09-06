@@ -1,10 +1,8 @@
-const { Keyboard, InlineKeyboard } = require("grammy");
-const { menuBtn } = require("../helpers/menu.helper");
-const uzbekistan_regions = require("../utils/region-menu");
+const { Keyboard } = require("grammy");
 
 const loginPhoneService = async (ctx) => {
   await ctx.reply(
-    `<b>Telefon raqamingizni jo'nating yoki yozib qoldiring</b>`,
+    `<b>Favqulodda vaziyatlar uchun qo'shimcha ikkinchi raqamingizni yuboring</b>`,
     {
       parse_mode: "HTML",
       reply_markup: new Keyboard()
@@ -23,16 +21,22 @@ const loginRegionService = async (ctx) => {
     reply_markup: new Keyboard()
       .text("Toshkent shahri")
       .text("Andijon viloyati")
+      .row()
       .text("Buxoro viloyati")
       .text("Farg'ona viloyati")
+      .row()
       .text("Jizzax viloyati")
       .text("Xorazm viloyati")
+      .row()
       .text("Namangan viloyati")
       .text("Navoiy viloyati")
+      .row()
       .text("Samarqand viloyati")
       .text("Sirdaryo viloyati")
+      .row()
       .text("Surxondaryo viloyati")
       .text("Toshkent viloyati")
+      .row()
       .text("Qoraqalpog'iston Respublikasi")
       .resized(),
   });
