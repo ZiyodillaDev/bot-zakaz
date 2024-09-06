@@ -20,10 +20,21 @@ const loginPhoneService = async (ctx) => {
 const loginRegionService = async (ctx) => {
   await ctx.reply(`<b>Xududni tanlang!</b>`, {
     parse_mode: "HTML",
-    reply_markup: {
-      ...menuBtn(uzbekistan_regions),
-      resize_keyboard: true,
-    },
+    reply_markup: new Keyboard()
+      .text("Toshkent shahri")
+      .text("Andijon viloyati")
+      .text("Buxoro viloyati")
+      .text("Farg'ona viloyati")
+      .text("Jizzax viloyati")
+      .text("Xorazm viloyati")
+      .text("Namangan viloyati")
+      .text("Navoiy viloyati")
+      .text("Samarqand viloyati")
+      .text("Sirdaryo viloyati")
+      .text("Surxondaryo viloyati")
+      .text("Toshkent viloyati")
+      .text("Qoraqalpog'iston Respublikasi")
+      .resized(),
   });
 
   ctx.session.step = "region";

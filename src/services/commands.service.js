@@ -9,6 +9,9 @@ const startService = async (ctx) => {
     }</a>. Zakaz berish uchun malumotlaringizni qoldiring! \n\nRo'yxatdan o'tishni boshlash uchun iltimos ismingizni kiriting.</b>`,
     {
       parse_mode: "HTML",
+      reply_markup: {
+        remove_keyboard: true,
+      },
     }
   );
 
