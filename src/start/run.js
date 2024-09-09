@@ -3,7 +3,7 @@ const start = async (bot) => {
     console.log(e.message);
   });
 
-  bot.start({ allowed_updates: ["chat_member", "message"] });
+  bot.start();
 };
 
 module.exports = start;
